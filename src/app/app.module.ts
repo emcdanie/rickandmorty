@@ -2,15 +2,22 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { RickandmortyinfoComponent } from './rickandmortyinfo/rickandmortyinfo.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RickandmortyinfoComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    // import HttpClientModule after BrowserModule.
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
